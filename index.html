@@ -21,7 +21,7 @@
                 My Connections
             </a>
         </nav>
-        <button class="signout-btn">
+        <button id="demo" onclick="myFunction()" class="signout-btn">
             sign out
         </button>
     </header>
@@ -52,5 +52,31 @@
             this is yellow
         </div>
     </main>
+    <script>
+        let state = true;
+    
+        let visits = 0;
+    
+        console.log(state)
+    
+        function myFunction() {
+            console.log(visits)
+            if(state == true){
+                if(visits % 2 == 0){
+                    document.getElementById("demo").innerHTML = "Even";
+                }else{
+                    document.getElementById("demo").innerHTML = "Hello World";
+                }
+                visits = visits + 1
+                state = false
+            }
+            else {
+                document.getElementById("demo").innerHTML = "sign out";
+                // visits = visits + 1
+                state = true
+            }  
+            console.log(state)
+        }
+    </script>
 </body>
 </html>
